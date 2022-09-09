@@ -23,6 +23,8 @@ def reload_data(omit_reload=False, speedup: bool = True) -> None:
         settings.ERK_DATA_PATH, settings.ERK_DATA_MOD_NAME, omit_reload=omit_reload
     )
 
+    pyerk.ackrep_parser.parse_ackrep()
+
     if mod is None:
         # this was an omited reload
         return
